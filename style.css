@@ -1,0 +1,29 @@
+.card-wrapper{
+    height: 20rem;
+    width: 20rem;
+    perspective: 1000px;
+
+}
+.content{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+.card-wrapper:hover .content{
+    transform: rotateY(180deg);
+    transition: 1s;
+}
+.face-front, .face-back{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    backface-visibility: hidden;
+
+}
+.face-back{
+    transform: rotateY(180deg);
+    border: 1px solid black;
+}
